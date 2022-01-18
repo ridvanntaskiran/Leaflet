@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section PageCSs{
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fontawesome.css" rel="stylesheet" />
+}
+<div class="flex mapid">
+    <div id="map" class="center-of-map"></div>
+    <div id="sidebar">
+        <div class="col-12">
+            <button class="btn btn-success col-6" onclick="LocationSave()" style="margin:10px">Noktayı Kaydet</button>
+            <a id="downloadLocations" class="btn btn-info col-6" style="margin:10px" onclick="DownloadLocations()">İndir</a>
+        </div>
+    </div>
+</div>
+
+@section PageJS{
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="~/Scripts/script.js" type="text/javascript"></script>
+}
